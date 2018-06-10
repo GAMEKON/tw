@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>遊戲控</title>
+  
+  <subtitle>簡約 · 精致</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tw.gamekon.com/"/>
+  <updated>2018-06-10T02:37:52.406Z</updated>
+  <id>https://tw.gamekon.com/</id>
+  
+  <author>
+    <name>遊戲控</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cocos Creator v2.0.0 Preview 如約而至</title>
+    <link href="https://tw.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html"/>
+    <id>https://tw.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html</id>
+    <published>2018-06-10T02:37:09.019Z</published>
+    <updated>2018-06-10T02:37:52.406Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="更新說明"><a class="markdownIt-Anchor" href="#更新說明"></a> <strong>更新說明</strong></h2><p>為了信守承諾，我們終於在五月的最後兩個小時準備好了 Cocos Creator v2.0 版本！好開心！好激動！</p><p>至於更新了哪些東西。。。我只能說，由於改動過大，不知從何說起。壹句話概括的話，就是在保障組件層 API 不變的情況下，我們把底層徹底重寫了，從 Cocos Creator v2.0 開始，將徹底從 Cocos2d-x 的框架脫胎重生，將不再能看到舊 Cocos 的影子，比如 1.x 時代的 sgNode 已經徹底見不到了。目前大家直接使用 v2.0 會遇到不少的警告和報錯，壹般都是由於使用了舊的 API，我們也為這些 API 都提供了詳細的報錯，包含如何升級和替換使用方式，請壹定留意所有的報錯信息。在升級完成之後，大家第壹印象能感受到的應該是 v2.0 帶來的性能提升，但是其實 v2.0 中我們還準備了很多驚喜給大家。在這裏要先說壹句抱歉，由於技術預覽版的準備時間倉促，我們暫時沒有將所有的文檔準備好，這些工作會在正式版發布前全部落實，到時候大家也就能真正發揮 v2.0 的潛力。</p><p>最重要的是，請大家壹定要備份好項目再嘗鮮，不要控制不住雙手。</p><h2 id="版本更新"><a class="markdownIt-Anchor" href="#版本更新"></a> <strong>版本更新</strong></h2><p>更新 Cocos Creator v2.0.0 Preview 4：<a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4_20180608.dmg" rel="external nofollow noopener noreferrer" target="_blank">下載 Mac 版本</a> | <a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4.7z" rel="external nofollow noopener noreferrer" target="_blank">下載 Windows 版本</a> (2018/6/8)</p><ul><li>[FEATURE] 新增節點 Alpha 級聯</li><li>[MODIF] 僅在需要時監聽小遊戲重力感應事件</li><li>[MODIF] 將 Editbox 中平臺相關代碼移動到平臺相關 builtin 模塊中</li><li>[FIX] 修復 Prefab 關閉時，恢復場景導致的報錯</li><li>[FIX] 修復編輯 Prefab 內部動畫時，雙擊打開其他 Prefab 會卡死的問題</li><li>[FIX] 修復 Sprite FillType 為 RADIAL 時不能編輯 FillCenter 的問題</li><li>[FIX] 修復修改節點 Anchor 後，undo 撤銷修改導致的顯示錯誤</li><li>[FIX] 修復 tilemap 如果包含空 layer 會報錯的問題</li><li>[FIX] 修復 DOM 相關組件事件監聽器引起的內存泄漏問題</li><li>[FIX] 修復 Mask 組件切換模式以及重新啟用時導致的持續報錯</li><li>[FIX] 修復相鄰 Mask 被錯誤批處理的問題</li><li>[FIX] 修復 Active 狀態更新後的 world transform 錯誤</li><li>[FIX] 修復 Auto remove on finish 導致粒子節點在編輯器中消失的問題</li><li>[FIX] 修復 Example 工程主界面測試按鈕的顯示抖動</li><li>[FIX] 修復 Editbox 的顯示殘留問題</li><li>[FIX] 修復節點下添加多個渲染組件的報錯問題</li><li>[FIX] 修復 BMFont Label 顏色無法設置問題</li><li>[FIX] 修復 LabelOutline 透明度不受節點透明度影響問題</li><li>[FIX] 修復安卓小遊戲平臺重力感應事件</li><li>[FIX] 修復 Sprite 組件 Sliced 模式的渲染問題</li><li>[FIX] 修復 Sprite 組件 Gray State 導致 gl warning 的問題</li><li>[FIX] 修復編輯 Prefab 之後返回場景導致場景失效的問題</li><li>[FIX] 修復 Accelerometer 事件在屏幕朝向不等同於設備朝向時的坐標軸錯誤</li><li>[FIX] 修復節點事件的 target 和 currentTarget 問題</li></ul><h2 id="相關資源"><a class="markdownIt-Anchor" href="#相關資源"></a> <strong>相關資源</strong></h2><p><a href="https://github.com/pandamicro/heartfelt" rel="external nofollow noopener noreferrer" target="_blank">Material 使用案例</a></p><h2 id="release-notes"><a class="markdownIt-Anchor" href="#release-notes"></a> <strong>RELEASE NOTES</strong></h2><p><strong>平臺支持</strong><br>Cocos Creator v2.0.0 Preview 是壹個技術預覽版，目前尚不支持所有平臺，以下是我們支持的平臺</p><p>Web（WebGL 渲染）<br>微信小遊戲平臺</p><p><strong>資源升級</strong><br>v2.0 合並了 v1.10 的所有修改，v1.10 對底層資源類型進行了重構，大多數項目不受影響，但有些項目可能會收到壹些警告，詳情請查閱 <a href="http://docs.cocos.com/creator/manual/zh/release-notes/raw-asset-migration.html" rel="external nofollow noopener noreferrer" target="_blank">v1.10 資源升級指南</a>。</p><p><strong>編輯器</strong><br>實現了 Texture 的 premultiply alpha，filter mode，wrap mode 配置<br>集成 Quick Compile，自定義引擎只需要使用菜單的 “開發者選項” -&gt; “編譯引擎” 可在幾秒內快速編譯完成</p><p><strong>引擎</strong><br>徹底移除渲染樹<br>添加基於 3D Renderer 的新渲染器<br>渲染組件實現全面升級<br>Camera 組件升級<br>添加自定義渲染組件能力（尚未公開文檔，正式版之前會開放）<br>正式增加了 RenderTexture 資源類型，可以參考 example cases 中的 “render_to_canvas” 和 “render_to_sprite” 測試用例學習如何使用 RenderTexture 完成截屏</p><p><strong>REMOVED &amp; DEPRECATION</strong><br>v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以參考 <a href="https://github.com/cocos-creator/engine/blob/next/cocos2d/deprecated.js" rel="external nofollow noopener noreferrer" target="_blank">deprecated.js</a></p><h2 id="性能和框架"><a class="markdownIt-Anchor" href="#性能和框架"></a> <strong>性能和框架</strong></h2><p><strong>性能進化</strong><br>從 v2.0 開始，我們建立了性能基線跟蹤測試，下面是 v1.8.2（v1.x 後續版本沒有性能優化）和 v2.0 的性能對比<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/1.jpg" alt="性能對比"></p><p><strong>框架進化</strong><br>這裏放出兩張簡單的 v2.0 架構圖以及和 v1.x 的對比，未來會有更詳細的文檔獻給大家<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/2.jpg" alt="1.x節點樹"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/3.jpg" alt="2.0節點樹"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/4.jpg" alt="2.0渲染框架"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;更新說明&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#更新說明&quot;&gt;&lt;/a&gt; &lt;strong&gt;更新說明&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;為了信守承諾，我們終於在五月的最後兩個小時準備好了 Cocos Creator v2.0 版本！好
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="新聞" scheme="https://tw.gamekon.com/tags/%E6%96%B0%E8%81%9E/"/>
+    
+      <category term="Cocos Creator" scheme="https://tw.gamekon.com/tags/Cocos-Creator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享壹些我喜歡使用的軟件</title>
+    <link href="https://tw.gamekon.com/2018/05/10/some-software-i-use.html"/>
+    <id>https://tw.gamekon.com/2018/05/10/some-software-i-use.html</id>
+    <published>2018-05-10T02:16:21.767Z</published>
+    <updated>2018-05-10T02:16:54.377Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有壹些腳本和軟件我經常使用，但是有時用著不順手，所以我對它們做了壹些修改，使它們更加方便使用。<br>在此分享我的成果。</p></blockquote><h3 id="油猴腳本"><a class="markdownIt-Anchor" href="#油猴腳本"></a> <strong>油猴腳本</strong></h3><ul><li><a href="https://github.com/GAMEKON/drag_translation" rel="external nofollow noopener noreferrer" target="_blank">劃詞翻譯</a></li><li><a href="https://github.com/GAMEKON/soTab_plusplus" rel="external nofollow noopener noreferrer" target="_blank">搜索引擎跳轉</a></li><li><a href="https://github.com/GAMEKON/AssetStore-Linkify" rel="external nofollow noopener noreferrer" target="_blank">Unity AssetStore 鏈接預覽</a></li></ul><h3 id="軟件"><a class="markdownIt-Anchor" href="#軟件"></a> <strong>軟件</strong></h3><ul><li><a href="https://github.com/GAMEKON/sublime_text_3.1-3170-" rel="external nofollow noopener noreferrer" target="_blank">sublime_text.exe</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;有壹些腳本和軟件我經常使用，但是有時用著不順手，所以我對它們做了壹些修改，使它們更加方便使用。&lt;br&gt;
+在此分享我的成果。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;油猴腳本&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; h
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="分享" scheme="https://tw.gamekon.com/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="軟件" scheme="https://tw.gamekon.com/tags/%E8%BB%9F%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>開源智能數獨遊戲</title>
+    <link href="https://tw.gamekon.com/2018/05/01/open-source-smart-sudoku.html"/>
+    <id>https://tw.gamekon.com/2018/05/01/open-source-smart-sudoku.html</id>
+    <published>2018-05-01T01:52:46.663Z</published>
+    <updated>2018-05-01T01:54:04.162Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/05/01/open-source-smart-sudoku/main.png" alt="sudoku" title="sudoku"></p><p>在 <a href="https://github.com/GAMEKON/NewSudoku_beta" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/GAMEKON/NewSudoku_beta</a> 開源。</p><p><strong>MIT許可證。</strong></p><h2 id="功能"><a class="markdownIt-Anchor" href="#功能"></a> 功能：</h2><ul><li><p>保存/加載遊戲進度</p></li><li><p>易/中/難/巨難 四種難度選擇</p></li><li><p>實時自動生成題面，也可以保存題面以供加載</p></li><li><p>屏幕分辨率適配，移動設備旋轉適配</p></li><li><p>解題系統 （1，改正玩家錯誤數據；2，如果需要自動顯示候選數；3，給出解題過程）</p></li></ul><a id="more"></a><h2 id="屏幕旋轉方向適配"><a class="markdownIt-Anchor" href="#屏幕旋轉方向適配"></a> 屏幕旋轉方向適配</h2><p><img src="/2018/05/01/open-source-smart-sudoku/screen_fit_1.gif" alt="screen fit" title="screen fit"><br><img src="/2018/05/01/open-source-smart-sudoku/screen_fit_2.gif" alt="screen fit" title="screen fit"></p><p>代碼基於sudokuJS<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。<br>我做了壹點小修改以便它適應cocos creator。</p><p>歡迎批評指正。</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item">https://github.com/pocketjoso/sudokuJS/blob/master/sudokuJS.js <a href="#fnref1" class="footnote-backref">↩︎</a></li></ol></section>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2018/05/01/open-source-smart-sudoku/main.png&quot; alt=&quot;sudoku&quot; title=&quot;sudoku&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;a href=&quot;https://github.com/GAMEKON/NewSudoku_beta&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://github.com/GAMEKON/NewSudoku_beta&lt;/a&gt; 開源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MIT許可證。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;功能&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#功能&quot;&gt;&lt;/a&gt; 功能：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;保存/加載遊戲進度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;易/中/難/巨難 四種難度選擇&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;實時自動生成題面，也可以保存題面以供加載&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;屏幕分辨率適配，移動設備旋轉適配&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解題系統 （1，改正玩家錯誤數據；2，如果需要自動顯示候選數；3，給出解題過程）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="產品" scheme="https://tw.gamekon.com/categories/%E7%94%A2%E5%93%81/"/>
+    
+    
+      <category term="免費" scheme="https://tw.gamekon.com/tags/%E5%85%8D%E8%B2%BB/"/>
+    
+      <category term="數獨" scheme="https://tw.gamekon.com/tags/%E6%95%B8%E7%8D%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日常工作，與朋友聊天</title>
+    <link href="https://tw.gamekon.com/2018/04/29/chatting-with-my-friends.html"/>
+    <id>https://tw.gamekon.com/2018/04/29/chatting-with-my-friends.html</id>
+    <published>2018-04-29T07:04:48.908Z</published>
+    <updated>2018-04-29T07:12:41.969Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>我有壹個QQ群，裏面都是我的遊戲粉絲，每天工作中與他們聊聊天，是我最快樂的事。</p></blockquote><p><img src="/2018/04/29/chatting-with-my-friends/screenshot.jpg" alt="工作聊天" title="工作聊天"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;我有壹個QQ群，裏面都是我的遊戲粉絲，每天工作中與他們聊聊天，是我最快樂的事。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/04/29/chatting-with-my-friends/screenshot.jpg&quot; 
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="日常" scheme="https://tw.gamekon.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>壹個有趣的算法題目</title>
+    <link href="https://tw.gamekon.com/2018/04/28/An-Interesting-Question.html"/>
+    <id>https://tw.gamekon.com/2018/04/28/An-Interesting-Question.html</id>
+    <published>2018-04-28T02:38:30.893Z</published>
+    <updated>2018-04-28T02:39:04.305Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有N個熱狗，妳可以每次吃掉壹個，也可以每次吃掉兩個，請輸出各種吃法。</p></blockquote><h2 id="-more-"><a class="markdownIt-Anchor" href="#-more-"></a> <a id="more"></a></h2><p>解答：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> EatingHotdogs</span><br><span class="line">&#123;</span><br><span class="line">    a: <span class="built_in">Array</span>&lt;<span class="built_in">number</span>&gt; = [];</span><br><span class="line">    n: <span class="built_in">number</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">arg</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.n = <span class="built_in">parseInt</span>(arg);</span><br><span class="line">        <span class="keyword">this</span>.eat(<span class="keyword">this</span>.n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    eat(i: <span class="built_in">number</span>): <span class="built_in">void</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; <span class="keyword">this</span>.sum() == <span class="keyword">this</span>.n)</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.a.push(<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">this</span>.eat(i - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">this</span>.a.pop();</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.a.push(<span class="number">2</span>);</span><br><span class="line">                <span class="keyword">this</span>.eat(i - <span class="number">2</span>);</span><br><span class="line">                <span class="keyword">this</span>.a.pop();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sum(): <span class="built_in">number</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">let</span> s = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> <span class="keyword">this</span>.a)</span><br><span class="line">            s += <span class="keyword">this</span>.a[i];</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> EatingHotdogs(<span class="number">8</span>);</span><br></pre></td></tr></table></figure><hr><p>輸出：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span> ]</span><br><span class="line">[ <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span> ]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;有N個熱狗，妳可以每次吃掉壹個，也可以每次吃掉兩個，請輸出各種吃法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="程序" scheme="https://tw.gamekon.com/tags/%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="算法" scheme="https://tw.gamekon.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今天，我做了個雲共享記事本</title>
+    <link href="https://tw.gamekon.com/2018/04/23/online-notepad.html"/>
+    <id>https://tw.gamekon.com/2018/04/23/online-notepad.html</id>
+    <published>2018-04-23T08:19:16.253Z</published>
+    <updated>2018-04-23T08:33:27.551Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/04/23/online-notepad/notepad.png" alt="雲共享記事本" title="雲共享記事本"></p><p>今天，我做了個<a href="https://ws.gamekon.com/notepad" rel="external nofollow noopener noreferrer" target="_blank">雲共享記事本</a>。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/04/23/online-notepad/notepad.png&quot; alt=&quot;雲共享記事本&quot; title=&quot;雲共享記事本&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天，我做了個&lt;a href=&quot;https://ws.gamekon.com/notepad&quot; rel
+      
+    
+    </summary>
+    
+      <category term="產品" scheme="https://tw.gamekon.com/categories/%E7%94%A2%E5%93%81/"/>
+    
+    
+      <category term="免費" scheme="https://tw.gamekon.com/tags/%E5%85%8D%E8%B2%BB/"/>
+    
+      <category term="雲共享" scheme="https://tw.gamekon.com/tags/%E9%9B%B2%E5%85%B1%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在新Photoshop中安裝舊插件</title>
+    <link href="https://tw.gamekon.com/2018/04/17/install-old-plugin-into-new-ps.html"/>
+    <id>https://tw.gamekon.com/2018/04/17/install-old-plugin-into-new-ps.html</id>
+    <published>2018-04-17T08:30:23.513Z</published>
+    <updated>2018-04-18T02:09:48.660Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>有時我們需要使用舊插件時發現最新版的Photoshop已經不支持它的安裝了😞，本篇文章就來嘗試在新Photoshop中安裝舊插件。</p></blockquote><hr><p>比如說我有壹個需要使用的插件<code>plugin.zxp</code>，我的Photoshop版本是 CC 2018 最新版，我無法用以前的方法安裝這個plugin.zxp，該怎麽辦呢？<br>其實zxp就是zip格式的壓縮文件，用winRAR將其解壓後可得到壹個目錄。我們把這個目錄移入<code>C:\Users\%username%\AppData\Roaming\Adobe\CEP\extensions\</code>目錄下即可。<br>如果是Mac系統，相應的路徑是 <code>/Library/Application\ Support/Adobe/CEP/extensions/</code> 。</p><p>但是這時還不能打開Photoshop使用插件，因為會出現“簽名不被認可”錯誤。<br>解決方法是打開regedit，<code>HKEY_CURRENT_USER/Software/Adobe/</code> 下找到 <code>CSXS.7</code> 或者 <code>CSXS.8</code> 等，在它們的目錄下新建字符串鍵 <code>PlayerDebugMode</code> 值為 <code>1</code> 。</p><p>現在再打開Photoshop，就可以在擴展窗口裏找到安裝好的插件了。</p><p>好了，讓我們繼續開始工作吧！😊</p><p><img src="/2018/04/17/install-old-plugin-into-new-ps/map.png" alt="map"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;有時我們需要使用舊插件時發現最新版的Photoshop已經不支持它的安裝了😞，本篇文章就來嘗試在新Photoshop中安裝舊插件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;比如說我有壹個需要使用的插件&lt;code&gt;plugin.zxp&lt;
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="經驗" scheme="https://tw.gamekon.com/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新遊戲項目 Happy Magic</title>
+    <link href="https://tw.gamekon.com/2018/04/15/happy-magic-01.html"/>
+    <id>https://tw.gamekon.com/2018/04/15/happy-magic-01.html</id>
+    <published>2018-04-15T08:34:09.263Z</published>
+    <updated>2018-04-18T02:08:30.959Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/04/15/happy-magic-01/HappyMagicModel.png" alt="model"></p><blockquote><p>Happy Magic, Happy Day!</p></blockquote><p>從今天開始遊戲項目<code>HappyMagic</code>正式立項！🎉<br>以上是遊戲服務模型圖，敬請期待。<br>遊戲贊助可以點擊這裏：<br><a href="https://www.paypal.me/gamekon/" rel="external nofollow noopener noreferrer" target="_blank">https://www.paypal.me/gamekon/</a><br>謝謝！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/04/15/happy-magic-01/HappyMagicModel.png&quot; alt=&quot;model&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Happy Magic, Happy Day!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;從
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="項目" scheme="https://tw.gamekon.com/tags/%E9%A0%85%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 let&#39;s encrypt 免費加密證書</title>
+    <link href="https://tw.gamekon.com/2018/04/14/lets-encrypt-ssl.html"/>
+    <id>https://tw.gamekon.com/2018/04/14/lets-encrypt-ssl.html</id>
+    <published>2018-04-14T09:33:19.235Z</published>
+    <updated>2018-04-18T02:10:17.526Z</updated>
+    
+    <content type="html"><![CDATA[<br><h2 id="域名鏈證書"><a class="markdownIt-Anchor" href="#域名鏈證書"></a> <strong>域名鏈證書</strong></h2><p>這是傳統的域名證書。</p><h3 id="獲取"><a class="markdownIt-Anchor" href="#獲取"></a> <strong>獲取</strong></h3><ol><li>wget <a href="https://dl.eff.org/certbot-auto" rel="external nofollow noopener noreferrer" target="_blank">https://dl.eff.org/certbot-auto</a></li><li>chmod u+x certbot-auto</li><li>./certbot-auto certonly -d <em>DOMAIN</em>.com -d www.<em>DOMAIN</em>.com -d <em>OTHER</em>.<em>DOMAIN</em>.com</li><li>選擇3 (webroot http-01 challenge)</li><li>輸入郵箱地址</li><li>接受許可協議和授權信息記錄等</li><li>輸入webroot路徑</li><li>如果還使用其他webroot，則繼續輸入其他webroot路徑</li></ol><p>順利的話SSL證書會自動在<code>/etc/letsencrypt/</code>下生成。</p><h3 id="更新"><a class="markdownIt-Anchor" href="#更新"></a> <strong>更新</strong></h3><ol><li>測試：cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 5)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew --dry-run &amp;&amp; echo “ok”</li><li>建立自動執行時間安排表<ul><li>nano /etc/crontab</li><li>0 0,12 * * * root cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew &amp;&amp; nginx -s reload</li><li>service cron restart</li></ul></li></ol><br><h2 id="通配符證書"><a class="markdownIt-Anchor" href="#通配符證書"></a> <strong>通配符證書</strong></h2><p>通配符證書<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>是2018年春季let’s encrypt正式開放申請的免費證書，雖然我的網站上不使用它，下面的命令也大都沒測試過，還是在這裏做壹個記錄。</p><h3 id="獲取-2"><a class="markdownIt-Anchor" href="#獲取-2"></a> <strong>獲取</strong></h3><ol><li>wget <a href="https://dl.eff.org/certbot-auto" rel="external nofollow noopener noreferrer" target="_blank">https://dl.eff.org/certbot-auto</a></li><li>chmod u+x certbot-auto</li><li>./certbot-auto --server <a href="https://acme-v02.api.letsencrypt.org/directory" rel="external nofollow noopener noreferrer" target="_blank">https://acme-v02.api.letsencrypt.org/directory</a> -d “*.<em>DOMAIN</em>.com” --manual --preferred-challenges dns-01 certonly</li><li>輸入郵箱地址</li><li>接受許可協議和授權信息記錄等</li><li>根據提示添加 DNS TXT 記錄</li><li>dig _acme-challenge.<em>DOMAIN</em>.com txt 確認解析記錄是否生效</li><li>返回交互界面按回車確認繼續</li></ol><p>順利的話SSL證書會自動在<code>/etc/letsencrypt/</code>下生成。</p><h3 id="更新-2"><a class="markdownIt-Anchor" href="#更新-2"></a> <strong>更新</strong></h3><ol><li>pip install dns-lexicon</li><li>下載並配置examples裏的 <a href="http://certbot.default.sh" rel="external nofollow noopener noreferrer" target="_blank">certbot.default.sh</a></li><li>chmod u+x <a href="http://certbot.default.sh" rel="external nofollow noopener noreferrer" target="_blank">certbot.default.sh</a></li><li>測試：cd / &amp;&amp; ./root/certbot-auto renew --manual-auth-hook <a href="http://certbot.default.sh" rel="external nofollow noopener noreferrer" target="_blank">certbot.default.sh</a> --manual-cleanup-hook <a href="http://certbot.default.sh" rel="external nofollow noopener noreferrer" target="_blank">certbot.default.sh</a> --dry-run &amp;&amp; echo “ok”</li><li>建立自動執行時間安排表<ul><li>nano /etc/crontab</li><li>0 0 * * 0 root cd / &amp;&amp; ./root/certbot-auto renew --manual-auth-hook /root/certbot.default.sh --manual-cleanup-hook /root/certbot.default.sh &amp;&amp; nginx -s reload</li><li>service cron restart</li></ul></li></ol><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item">通配符證書，也叫野卡。 <a href="#fnref1" class="footnote-backref">↩︎</a></li></ol></section>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;br&gt;
+&lt;h2 id=&quot;域名鏈證書&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#域名鏈證書&quot;&gt;&lt;/a&gt; &lt;strong&gt;域名鏈證書&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;這是傳統的域名證書。&lt;/p&gt;
+&lt;h3 id=&quot;獲取&quot;&gt;&lt;a class=&quot;mark
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="域名" scheme="https://tw.gamekon.com/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="經驗" scheme="https://tw.gamekon.com/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關於Photoshop的兩點經驗</title>
+    <link href="https://tw.gamekon.com/2018/04/12/two-experiences-about-photoshop.html"/>
+    <id>https://tw.gamekon.com/2018/04/12/two-experiences-about-photoshop.html</id>
+    <published>2018-04-12T06:37:19.770Z</published>
+    <updated>2018-04-18T02:11:01.628Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li><a href="https://helpx.adobe.com/photoshop/using/generate-assets-layers.html" rel="external nofollow noopener noreferrer" target="_blank">圖片資源生成器</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li><li><a href="https://www.cherubicsoft.com/en/projects/sagethumbs" rel="external nofollow noopener noreferrer" target="_blank">psd縮略圖預覽器</a><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item">與之對應的Adobe Illustrator的功能是 “Export Assets Panel”。 <a href="#fnref1" class="footnote-backref">↩︎</a></li><li id="fn2" class="footnote-item">安裝SageThumbs之前要安裝 <a href="http://sourceforge.net/projects/ghostscript/files/AFPL%20Ghostscript/8.54/gs854w64.exe/download" rel="external nofollow noopener noreferrer" target="_blank">Ghostscript library</a>;<br>安裝SageThumbs之後要打開“圖像嵌入縮略圖”功能並調大“圖像文件最大”值。<br>在Photoshop保存文件時要確保勾選“縮略圖”選項，<strong>從此之後</strong>再保存的psd文件即可顯示縮略圖。 <a href="#fnref2" class="footnote-backref">↩︎</a></li></ol></section>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://helpx.adobe.com/photoshop/using/generate-assets-layers.html&quot; rel=&quot;external nofollow noopener noreferrer&quot; targ
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="經驗" scheme="https://tw.gamekon.com/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在線密碼生成器</title>
+    <link href="https://tw.gamekon.com/2018/04/12/Password-Generator.html"/>
+    <id>https://tw.gamekon.com/2018/04/12/Password-Generator.html</id>
+    <published>2018-04-12T04:07:31.280Z</published>
+    <updated>2018-04-18T02:10:45.251Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/04/12/Password-Generator/Password-Generator.png" alt="Password-Generator"></p><p>壹個用Cocos Creator做的在線密碼生成器。</p><p>本產品是免費軟件並且在 <a href="https://github.com/GAMEKON/PasswordGenerator" rel="external nofollow noopener noreferrer" target="_blank">這裏</a>開放源碼。</p><p>您也可以在   <a href="https://GAMEKON.coding.me/storge/Password-Generator/index.html" rel="external nofollow noopener noreferrer" target="_blank">這裏</a>在線使用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2018/04/12/Password-Generator/Password-Generator.png&quot; alt=&quot;Password-Generator&quot;&gt;&lt;/p&gt;
+&lt;p&gt;壹個用Cocos Creator做的在線密碼生成器。&lt;/p&gt;
+&lt;p&gt;本產品是免
+      
+    
+    </summary>
+    
+      <category term="產品" scheme="https://tw.gamekon.com/categories/%E7%94%A2%E5%93%81/"/>
+    
+    
+      <category term="Cocos" scheme="https://tw.gamekon.com/tags/Cocos/"/>
+    
+      <category term="免費" scheme="https://tw.gamekon.com/tags/%E5%85%8D%E8%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>出售域名cocosgames.com</title>
+    <link href="https://tw.gamekon.com/2018/04/04/cocos-domain-on-sale.html"/>
+    <id>https://tw.gamekon.com/2018/04/04/cocos-domain-on-sale.html</id>
+    <published>2018-04-04T02:28:48.455Z</published>
+    <updated>2018-04-18T02:08:06.100Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="因工作室資金短缺故出售名下域名-cocosgamescom"><a class="markdownIt-Anchor" href="#因工作室資金短缺故出售名下域名-cocosgamescom"></a> <strong>因工作室資金短缺，故出售名下域名 <a href="http://cocosgames.com" rel="external nofollow noopener noreferrer" target="_blank">cocosgames.com</a>。</strong></h3><h3 id="需要者請點擊這裏購買"><a class="markdownIt-Anchor" href="#需要者請點擊這裏購買"></a> <strong>需要者請點擊<a href="https://www.paypal.me/gamekon/999usd" rel="external nofollow noopener noreferrer" target="_blank">這裏</a>購買。</strong></h3><h3 id="然後聯系supportgamekoncom更換域名所有者信息"><a class="markdownIt-Anchor" href="#然後聯系supportgamekoncom更換域名所有者信息"></a> <strong>然後聯系support@gamekon.com更換域名所有者信息。</strong></h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;因工作室資金短缺故出售名下域名-cocosgamescom&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#因工作室資金短缺故出售名下域名-cocosgamescom&quot;&gt;&lt;/a&gt; &lt;strong&gt;因工作室資金短缺，故出售名下域名 &lt;a h
+      
+    
+    </summary>
+    
+      <category term="產品" scheme="https://tw.gamekon.com/categories/%E7%94%A2%E5%93%81/"/>
+    
+    
+      <category term="Cocos" scheme="https://tw.gamekon.com/tags/Cocos/"/>
+    
+      <category term="域名" scheme="https://tw.gamekon.com/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cocos Creator用的色相、亮度、飽和度插件</title>
+    <link href="https://tw.gamekon.com/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator.html"/>
+    <id>https://tw.gamekon.com/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator.html</id>
+    <published>2018-04-03T11:24:50.706Z</published>
+    <updated>2018-04-18T02:09:25.325Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator/hsl_preview.png" alt="hsl_preview" title="Cocos Creator用的色相、亮度、飽和度插件"></p><a id="more"></a><p><img src="/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator/hsl.gif" alt="hsl" title="Cocos Creator用的色相、亮度、飽和度插件"></p><p>想把圖標變成灰度圖？ 想用壹張圖片做出不同顏色的怪物？ 想在飛機爆炸前高亮顯示？</p><p>壹個插件統統搞定！</p><p>用法： 把Sprite_HSL.js拖到任意Sprite上，隨便調整吧~~</p><p>Cocos Creator 1.9 HTML5(WebGL) 和 Mobile Native 上測試通過。</p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="width:fit-content; text-align:center"><input type="hidden" name="charset" value="utf-8"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="CRE6QAE2JZEFY"><input type="hidden" name="lc" value="US"><input type="hidden" name="item_name" value="Cocos Creator&#29992;&#30340;&#33394;&#30456;&#12289;&#20142;&#24230;&#12289;&#39165;&#21644;&#24230;&#25554;&#20214;"><input type="hidden" name="item_number" value="tw-p-HSL"><input type="hidden" name="button_subtype" value="services"><input type="hidden" name="no_note" value="0"><input type="hidden" name="cn" value="&#32102;&#36938;&#25138;&#25511;&#30340;&#30041;&#35328;:"><input type="hidden" name="no_shipping" value="1"><input type="hidden" name="rm" value="1"><input type="hidden" name="return" value="http://tw.gamekon.com/thank-you"><input type="hidden" name="cancel_return" value="http://tw.gamekon.com/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator/"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="tax_rate" value="0.000"><input type="hidden" name="shipping" value="0.00"><input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest"><table><tr><td><input type="hidden" name="on0" value="&#35377;&#21487;&#35657;">&#35377;&#21487;&#35657;</td></tr><tr><td><select name="os0"><option value="&#20491;&#20154;&#20351;&#29992;&#35377;&#21487;&#35657;">&#20491;&#20154;&#20351;&#29992;&#35377;&#21487;&#35657; $ 2.00 USD</option><option value="&#20844;&#21496;&#20351;&#29992;&#35377;&#21487;&#35657;">&#20844;&#21496;&#20351;&#29992;&#35377;&#21487;&#35657; $ 12.00 USD</option></select> </td></tr></table><input type="hidden" name="option_select0" value="&#20491;&#20154;&#20351;&#29992;&#35377;&#21487;&#35657;"><input type="hidden" name="option_amount0" value="2.00"><input type="hidden" name="option_select1" value="&#20844;&#21496;&#20351;&#29992;&#35377;&#21487;&#35657;"><input type="hidden" name="option_amount1" value="12.00"><input type="hidden" name="option_index" value="0"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></form>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2018/04/03/Hue-Saturation-Lightness-Shader-For-Cocos-Creator/hsl_preview.png&quot; alt=&quot;hsl_preview&quot; title=&quot;Cocos Creator用的色相、亮度、飽和度插件&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="產品" scheme="https://tw.gamekon.com/categories/%E7%94%A2%E5%93%81/"/>
+    
+    
+      <category term="Cocos" scheme="https://tw.gamekon.com/tags/Cocos/"/>
+    
+      <category term="插件" scheme="https://tw.gamekon.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>圖片加密的另壹種思路</title>
+    <link href="https://tw.gamekon.com/2018/04/03/another-way-to-encrypt-images.html"/>
+    <id>https://tw.gamekon.com/2018/04/03/another-way-to-encrypt-images.html</id>
+    <published>2018-04-03T03:42:29.503Z</published>
+    <updated>2018-04-18T02:07:30.933Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>千裏之行始於足下。</p></blockquote><p>在下前些日子大病了壹場，好了之後回來看看與專業相關的技術，發現變化非常的大。技術更新真是日新月異，索性來個技術大升級。<br>整理硬盤的時候，翻出來許多以前在Unity裏做過的小研究項目。比如如何加密數據避免運行時被篡改，比如如何加密字符串來保護廣告商id號碼，比如這篇文章要討論的“圖片加密的另壹種思路”。</p><a id="more"></a><p>為什麽要加密圖片呢？其實就是怕別人拿到妳的遊戲圖片做成遊戲再更換平臺發售，從而分走本應屬於妳的那部分利益。<br>本來我自己畫的圖片就非常難看，所以當時做這個研究也是多心了……<br>聊勝於無，就在博客裏做個記錄吧。</p><h2 id="基本思路"><a class="markdownIt-Anchor" href="#基本思路"></a> <strong>基本思路</strong></h2><p>為什麽叫“另壹種”加密思路呢？因為這個手段不是要讓黑客無法拿到圖片，而是換壹種思路，要讓他們拿到了也用不了。<br>（其實對於萬能的動態內存提取方法而言，基本可以認為任何加密都是無濟於事的，但是這種情況在本篇文章中不予考慮。）<br>我們的基本思路是這樣的：</p><ol><li>對圖片進行壓縮，以便縮小遊戲整體大小</li><li>提取部分圖片像素，並且加密並保存在另壹個文件裏</li><li>清除原圖片被提取的像素，這樣圖片就是不完整的，黑客拿到也無法使用</li><li>使用不完整的圖片和加密後的數據在遊戲運行時進行解密，並且要做到速度足夠快而不影響遊戲體驗</li></ol><h2 id="pngquant與pngoo"><a class="markdownIt-Anchor" href="#pngquant與pngoo"></a> <strong>pngquant與PNGoo</strong></h2><p><a href="https://pngquant.org/" rel="external nofollow noopener noreferrer" target="_blank">pngquant</a> 是業界著名的png圖片壓縮工具，能在肉眼看不出區別的前提下壓縮圖片體積超過70%。<br><a href="https://pngquant.org/PNGoo.0.1.1.zip" rel="external nofollow noopener noreferrer" target="_blank">PNGoo</a> 是以pngquant為壓縮引擎的windows下的圖形交互界面。<br>PNGoo是壹個沒有license的開源項目，下面我們來<a href="https://github.com/NikkiDelRosso/PNGoo" rel="external nofollow noopener noreferrer" target="_blank">下載它</a>，然後在它上面動些手腳使它不但能壓縮圖片，還能支持我們想要實現的加密功能。<br>PNGoo是壹個用C#開發的.net應用程序，所以首先我們要確保計算機裏已經安裝了<a href="https://www.visualstudio.com/" rel="external nofollow noopener noreferrer" target="_blank">Visual Studio</a>。</p><h2 id="圖片加密"><a class="markdownIt-Anchor" href="#圖片加密"></a> <strong>圖片加密</strong></h2><p>打開PNGoo的主窗口，在裏面添加兩個CheckBox控件。</p><p><img src="/2018/04/03/another-way-to-encrypt-images/pngoo_add_checkbox.png" alt="pngoo_add_checkbox"></p><p>如果點選了左邊的選項，我們就對圖片進行加密操作；如果點選了右邊的選項，就順便做壹個圖片尺寸的縮小操作。<br>主要的代碼，修改<code>BatchFileCompressor.cs</code>的<code>compress</code>函數。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">private Compressor.PNGCompressor compress(string filePath)</span><br><span class="line">&#123;</span><br><span class="line">    // read file</span><br><span class="line">    byte[] fileData = File.ReadAllBytes(filePath);</span><br><span class="line"></span><br><span class="line">    List&lt;Color&gt; save = null;</span><br><span class="line">    if (Encrypt || HalfScale)</span><br><span class="line">    &#123;</span><br><span class="line">        MemoryStream ms = new MemoryStream(fileData);</span><br><span class="line">        Image image = System.Drawing.Image.FromStream(ms);</span><br><span class="line">        Bitmap b = new Bitmap(image);</span><br><span class="line"></span><br><span class="line">        if (Encrypt)</span><br><span class="line">        &#123;</span><br><span class="line">            save = new List&lt;Color&gt;();</span><br><span class="line">            for (int k = 0; k &lt; b.Height; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                for (int j = 0; j &lt; b.Width; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    if (j==(int)(k*b.Width/b.Height) || (b.Width-1-j)==(int)(k*b.Width/b.Height) ||</span><br><span class="line">                        j==0 &amp;&amp; k==0 || j==0 &amp;&amp; k==b.Height-1 || j==b.Width-1 &amp;&amp; k==0 || j==b.Width-1 &amp;&amp; k==b.Height-1)</span><br><span class="line">                    &#123;</span><br><span class="line">                        save.Add(b.GetPixel(j,k));</span><br><span class="line">                        b.SetPixel(j,k,Color.Black);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (HalfScale)</span><br><span class="line">        &#123;</span><br><span class="line">            Bitmap hb = new Bitmap(b.Width/2, b.Height/2);</span><br><span class="line">            Graphics g = Graphics.FromImage(hb);</span><br><span class="line">            g.InterpolationMode = InterpolationMode.HighQualityBicubic;</span><br><span class="line">            g.DrawImage(b, new Rectangle(0, 0, hb.Width, hb.Height), new Rectangle(0, 0, b.Width, b.Height), GraphicsUnit.Pixel);</span><br><span class="line">            g.Dispose();</span><br><span class="line">            b.Dispose();</span><br><span class="line">            b = hb;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ms.Dispose();</span><br><span class="line">        ms.Close();</span><br><span class="line">        ms = new MemoryStream();</span><br><span class="line">        b.Save(ms, ImageFormat.Png);</span><br><span class="line">        fileData = ms.GetBuffer();</span><br><span class="line">        b.Dispose();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    PNGCompressor pngc = null;</span><br><span class="line">    // select which compressor to use</span><br><span class="line">    switch (this.CompressionSettings.OutputType)</span><br><span class="line">    &#123;</span><br><span class="line">        case CompressionSettings.PNGType.Indexed:</span><br><span class="line">            pngc = compressIndexed(fileData);</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            throw new Exception(&quot;Invalid output type&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (Encrypt &amp;&amp; pngc!=null)</span><br><span class="line">    &#123;</span><br><span class="line">        byte[] obs = new byte[save.Count*4];</span><br><span class="line">        int plus = save.Count % 5;</span><br><span class="line">        int count35 = (save.Count - plus) * 3 / 5;</span><br><span class="line">        for (int l = count35-1; l &gt;= 0; l--)</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] savedBS = System.BitConverter.GetBytes(save[l].ToArgb());</span><br><span class="line">            savedBS.CopyTo(obs, (count35-1-l)*4);</span><br><span class="line">        &#125;</span><br><span class="line">        for (int m = save.Count-1; m &gt;= count35; m--)</span><br><span class="line">        &#123;</span><br><span class="line">            byte[] savedBS = System.BitConverter.GetBytes(save[m].ToArgb());</span><br><span class="line">            savedBS.CopyTo(obs, (save.Count-1-m+count35)*4);</span><br><span class="line">        &#125;</span><br><span class="line">        string outputDirectory = OutputDirectory;</span><br><span class="line">        string fileName = Path.GetFileNameWithoutExtension(filePath) + &quot;.bytes&quot;;</span><br><span class="line">        if (outputDirectory == null)</span><br><span class="line">        &#123;</span><br><span class="line">            outputDirectory = Path.GetDirectoryName(filePath);</span><br><span class="line">        &#125;</span><br><span class="line">        string outputFilePath = System.IO.Path.Combine(outputDirectory, fileName);</span><br><span class="line">        File.WriteAllBytes(outputFilePath, obs);</span><br><span class="line">    &#125;</span><br><span class="line">    return pngc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>忽略圖片尺寸縮小的功能，這段代碼的意思是在圖片上用黑色畫壹個十字交叉（x形），把覆蓋掉的像素存在壹個.bytes文件中。當然不能是按順序存儲，這樣容易被黑客發現。而是確定壹個偏移量，就是函數裏的變量<code>count35</code>。從這裏開始讀取像素數據，依次存到文件裏，剩下的像素數據再依次存到文件裏。而這個偏移量必須要告訴遊戲引擎，以便它能迅速的還原出原來的完整的圖片。<br>這個偏移量的取值就定為“取出的像素數據長度-長度與5的余數再乘以3再除以5”。這樣每個圖片的偏移量不壹定相同，而且不用額外記錄，就能讓遊戲引擎知道並且做到快速還原解密的效果。<br>這個方法是我想出來的，妳也可以用適合妳自己的方法。</p><h2 id="圖片還原"><a class="markdownIt-Anchor" href="#圖片還原"></a> <strong>圖片還原</strong></h2><p>在這裏，我是用的是Unity遊戲引擎。<br>新建壹個圖片類<code>CTexture</code>。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using System.Collections;</span><br><span class="line"></span><br><span class="line">[System.SerializableAttribute]</span><br><span class="line">public class CTexture</span><br><span class="line">&#123;</span><br><span class="line">public Texture2D image;</span><br><span class="line">public TextAsset data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>與之對應的Editor類<code>CTextureDrawer</code>。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">using UnityEditor;</span><br><span class="line">using UnityEngine;</span><br><span class="line"></span><br><span class="line">[CustomPropertyDrawer(typeof(CTexture))]</span><br><span class="line">public class CTextureDrawer : PropertyDrawer</span><br><span class="line">&#123;</span><br><span class="line">public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)</span><br><span class="line">&#123;</span><br><span class="line">label.text = &quot;Encrypted Texture&quot;;</span><br><span class="line">EditorGUI.BeginProperty(position, label, property);</span><br><span class="line">position = EditorGUI.PrefixLabel(position, GUIUtility.GetControlID(FocusType.Passive), label);</span><br><span class="line">var indent = EditorGUI.indentLevel;</span><br><span class="line">EditorGUI.indentLevel = 0;</span><br><span class="line">var imageRect = new Rect(position.x+50, position.y, 100, position.height);</span><br><span class="line">var dataRect = new Rect(position.x +210, position.y, 100, position.height);</span><br><span class="line">EditorGUI.LabelField(new Rect(position.x, position.y, 50, position.height), &quot;image: &quot;);</span><br><span class="line">EditorGUI.PropertyField(imageRect, property.FindPropertyRelative(&quot;image&quot;), GUIContent.none);</span><br><span class="line">EditorGUI.LabelField(new Rect(position.x+170, position.y, 50, position.height), &quot;data: &quot;);</span><br><span class="line">EditorGUI.PropertyField(dataRect, property.FindPropertyRelative(&quot;data&quot;), GUIContent.none);</span><br><span class="line">EditorGUI.indentLevel = indent;</span><br><span class="line">EditorGUI.EndProperty();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>也就是說每個CTexture需要不完整的圖片和與之對應的數據文件兩部分組成。<br>圖片解密：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">private Color GetColor(TextAsset ta, int index, int count, int plus)</span><br><span class="line">&#123;</span><br><span class="line">    int realIndex = (count - plus) / 5 * 3 -1 - index;</span><br><span class="line">    if (realIndex &lt; 0)</span><br><span class="line">        realIndex += count;</span><br><span class="line">    int c = System.BitConverter.ToInt32(ta.bytes, realIndex*4);</span><br><span class="line">    Color color = new Color();</span><br><span class="line">    color.b = (c &amp; 0x000000ff)/256f;</span><br><span class="line">    color.g = ((c &amp; 0x0000ff00) &gt;&gt; 8)/256f;</span><br><span class="line">    color.r = ((c &amp; 0x00ff0000) &gt;&gt; 16)/256f;</span><br><span class="line">    color.a = ((c &amp; 0xff000000) &gt;&gt; 24)/256f;</span><br><span class="line">    return color;</span><br><span class="line">&#125;</span><br><span class="line">public void DecryptImages()</span><br><span class="line">&#123;</span><br><span class="line">    foreach (var ct in encryptedImages)</span><br><span class="line">    &#123;</span><br><span class="line">        int count = ct.data.bytes.Length / 4;</span><br><span class="line">        int plus = count % 5;</span><br><span class="line">        int i = 0;</span><br><span class="line">        for (int k = ct.image.height-1; k &gt;= 0; k--)</span><br><span class="line">        &#123;</span><br><span class="line">            for (int j = 0; j &lt; ct.image.width; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                if (j==(int)(ct.image.height-1-k)*ct.image.width/ct.image.height || (ct.image.width-1-j)==(int)(ct.image.height-1-k)*ct.image.width/ct.image.height ||</span><br><span class="line">                    j==0 &amp;&amp; k==0 || j==0 &amp;&amp; k==ct.image.height-1 || j==ct.image.width-1 &amp;&amp; k==0 || j==ct.image.width-1 &amp;&amp; k==ct.image.height-1)</span><br><span class="line">                &#123;</span><br><span class="line">                    ct.image.SetPixel(j,k,GetColor(ct.data, i, count, plus));</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ct.image.Apply();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在遊戲的<code>Awake</code>函數裏調用<code>DecryptImages</code>函數即可完成圖片解密。<br>可見圖片的還原過程完全是加密的逆向操作。</p><h2 id="總結"><a class="markdownIt-Anchor" href="#總結"></a> <strong>總結</strong></h2><p>這種小兒科的把戲其實在實際應用中是沒有多大意義的。即使這樣，本篇文章作為壹種思路，拋磚引玉，也是有存在的道理的。</p><h3 id="參考鏈接"><a class="markdownIt-Anchor" href="#參考鏈接"></a> 參考鏈接</h3><ul><li>pngquant  <a href="https://pngquant.org/" title="pngquant" rel="external nofollow noopener noreferrer" target="_blank">https://pngquant.org/</a>。</li><li>PNGoo  <a href="https://github.com/NikkiDelRosso/PNGoo" title="PNGoo" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/NikkiDelRosso/PNGoo</a>。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;千裏之行始於足下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在下前些日子大病了壹場，好了之後回來看看與專業相關的技術，發現變化非常的大。技術更新真是日新月異，索性來個技術大升級。&lt;br&gt;
+整理硬盤的時候，翻出來許多以前在Unity裏做過的小研究項目。比如如何加密數據避免運行時被篡改，比如如何加密字符串來保護廣告商id號碼，比如這篇文章要討論的“圖片加密的另壹種思路”。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="Unity" scheme="https://tw.gamekon.com/tags/Unity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用webstorm+bitbucket+git(lfs)搭建開發環境</title>
+    <link href="https://tw.gamekon.com/2018/04/01/webstorm-bitbucket-git-with-lfs-for-your-project.html"/>
+    <id>https://tw.gamekon.com/2018/04/01/webstorm-bitbucket-git-with-lfs-for-your-project.html</id>
+    <published>2018-04-01T10:21:55.914Z</published>
+    <updated>2018-04-18T02:11:21.250Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>工欲善其事，必先利其器。</p></blockquote><p>作為壹個壹窮二白的個體遊戲開發者，如何提高工作效率就成為了項目成敗的關鍵。這篇文章就講講我是如何使用各種軟件搭建適合自己的開發環境。<br>我目前的操作系統是Windows 10專業版，其他系統大同小異。</p><a id="more"></a><h2 id="軟件安裝"><a class="markdownIt-Anchor" href="#軟件安裝"></a> <strong>軟件安裝</strong></h2><ul><li>安装 <a href="http://www.jetbrains.com/webstorm/" title="WebStorm" rel="external nofollow noopener noreferrer" target="_blank">WebStorm</a>。</li><li>安装 <a href="https://git-scm.com/" title="Git" rel="external nofollow noopener noreferrer" target="_blank">Git</a>。</li><li>安装 <a href="https://tortoisegit.org/" title="TortoiseGit" rel="external nofollow noopener noreferrer" target="_blank">TortoiseGit</a>。</li><li>安装 <a href="https://git-lfs.github.com/" title="LFS" rel="external nofollow noopener noreferrer" target="_blank">LFS</a>。</li></ul><p>其中，WebStorm是最好用的前（後）端開發工具，安裝後確保啟用其Git插件支持。<br>Git是版本控制軟件，TortoiseGit是Windows平臺圖形化界面，比Git自帶的好用很多。<br>LFS是比較新鮮的東西，它是負責跟蹤非代碼大文件的，比如photoshop的psd文件，下面我們就會使用到它。</p><h2 id="軟件配置"><a class="markdownIt-Anchor" href="#軟件配置"></a> <strong>軟件配置</strong></h2><p>安裝好LFS之後要在控制臺輸入命令<code>git lfs install</code>，以便讓LFS與Git建立起合作關系。<br>安裝好WebStorm之後請啟用它的Git插件和Terminal插件。</p><h2 id="軟件使用"><a class="markdownIt-Anchor" href="#軟件使用"></a> <strong>軟件使用</strong></h2><p>打開WebStorm，新建壹個工程。然後從它的菜單項選擇<code>VCS -&gt; Enable Version Control Integration</code>。<br>在彈出的菜單裏選擇<code>Git</code>。這時妳會發現工程項目的文件名都變成了紅色，說明Git已經在運作了。<br>我喜歡在項目文件夾裏添加壹個叫做raw的文件夾，裏面保存我用photoshop或者Adobe illustrator的原始文件，還有壹些音頻文件等。<br>它們的層級關系是這樣的：</p><pre><code>project│└───assets│   └───node_modules│└───raw    │    └───psd    │    └───background.psd    └───ai    │    └───music</code></pre><p>像這樣，raw裏面的文件就是LFS大顯身手的地方了。<br>在WebStorm裏打開控制臺，輸入<code>git lfs track &quot;raw/*/*&quot;</code>，如果命令正確運行的話，工程項目文件夾裏應該會自動添加壹個文件<code>.gitattributes</code>，打開之後裏面記錄如下</p><pre><code>raw/*/* filter=lfs diff=lfs merge=lfs -text</code></pre><p>很好，LFS也已經跟蹤了我的raw文件夾。這時候記得把工程目錄全部加入Git當中去，註意壹定也要包含剛才建立的.gitattributes文件。<br>此時全部文件名都變成綠色，說明可以提交了。<code>VCS -&gt; Commit...</code></p><pre><code>注意： 一定要在第一次Commit之前执行git lfs track！</code></pre><p>到bitbucket.org網站建立項目repository，記錄下git地址，然後就可以Push了。在本地幾百K的psd文件Push到bitbucket後僅有幾百字節，而且還能在網頁裏實時預覽，真是太方便了。</p><h2 id="常用git以及lfs命令"><a class="markdownIt-Anchor" href="#常用git以及lfs命令"></a> <strong>常用Git以及LFS命令</strong></h2><ul><li><code>git init</code>                                          初始化Git代碼庫。</li><li><code>git clone</code>                                         克隆代碼庫。</li><li><code>git commit</code>                                        提交代碼更改。</li><li><code>git revert</code>                                        取消代碼更改。</li><li><code>git pull</code>                                          代碼更新。</li><li><code>git clean</code>                                         移除Git沒有跟蹤的文件。</li><li><code>git branch</code>                                        查看本地分支。</li><li><code>git checkout master</code>                               切換為Git主幹。</li><li><code>git checkout -b local-branch origin/remote-branch</code> 切換為Git分支。</li><li><code>git lfs track &quot;*.png&quot;</code>                             讓LFS跟蹤png文件。</li><li><code>git lfs ls-files</code>                                  查看LFS跟蹤的文件。</li><li><code>git lfs track</code>                                     查看LFS跟蹤的Pattern。</li><li><code>git lfs clone</code>                                     克隆包含大文件的代碼庫。</li></ul><h3 id="參考鏈接"><a class="markdownIt-Anchor" href="#參考鏈接"></a> 參考鏈接</h3><ul><li>Use Git LFS with Bitbucket  <a href="https://confluence.atlassian.com/bitbucket/use-git-lfs-with-bitbucket-828781636.html" title="Use Git LFS with Bitbucket" rel="external nofollow noopener noreferrer" target="_blank">https://confluence.atlassian.com/bitbucket/use-git-lfs-with-bitbucket-828781636.html</a>。</li><li>LFS Getting Started  <a href="https://git-lfs.github.com/" title="LFS Getting Started" rel="external nofollow noopener noreferrer" target="_blank">https://git-lfs.github.com/</a>。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;工欲善其事，必先利其器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作為壹個壹窮二白的個體遊戲開發者，如何提高工作效率就成為了項目成敗的關鍵。這篇文章就講講我是如何使用各種軟件搭建適合自己的開發環境。&lt;br&gt;
+我目前的操作系統是Windows 10專業版，其他系統大同小異。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="https://tw.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="經驗" scheme="https://tw.gamekon.com/tags/%E7%B6%93%E9%A9%97/"/>
+    
+  </entry>
+  
+</feed>
