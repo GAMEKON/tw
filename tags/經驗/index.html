@@ -218,6 +218,116 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-chrome-extension-and-npm-error" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+
+    <h1 itemprop="name">
+      
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        <img src="/2018/06/15/chrome-extension-and-npm-error/featured.png">
+      </a>
+      
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        chrome非官方插件安裝與npm茶壺報錯處理
+      </a>
+    </h1>
+ 
+
+
+        
+        <a href="/2018/06/15/chrome-extension-and-npm-error.html" class="archive-article-date">
+  	<time datetime="2018-06-15T02:34:55.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-15</time>
+</a>
+        
+          <link rel="canonical" href="https://tw.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html">
+          <meta name="robots" content="all">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近工作中遇到兩個小問題，壹是最新版chrome安裝非官方擴展程序後，會不斷出現要求關閉該擴展程序的提示；二是npm安裝程序突然提示“error418 I’m a teapot”錯誤。我經過壹番實踐，解決了這兩個問題，順便在此記錄壹下解決過程。</p>
+</blockquote>
+<h2 id="chrome安裝非官方擴展程序"><a class="markdownIt-Anchor" href="#chrome安裝非官方擴展程序"></a> <strong>chrome安裝非官方擴展程序</strong></h2>
+<ol>
+<li>chrome://extensions/ 打開擴展程序列表，通過拖拽crx文件的方式安裝擴展程序並記錄程序id，chrome會提示不可開啟，不用管它。</li>
+<li>通過 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下載策略文件包。</li>
+<li>復制壓縮包裏的windows\admx\chrome.admx 到 c:\windows\policydefinitions；復制壓縮包裏的windows\admx[妳的語言]\chrome.adml 到 c:\windows\policydefinitions[妳的語言]\chrome.adml。</li>
+<li>打開gpedit.msc本地組策略編輯器，展開 用戶配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 擴展程序，雙擊打開“配置擴展程序安裝白名單”，選中“已啟用”，點擊“顯示…”，在列表中輸入剛才記下的擴展程序id值，點擊確定。</li>
+<li>重啟Chrome，可以看到被禁用的擴展現在已經可以啟用了。</li>
+</ol>
+<h2 id="npm-error418-茶壺錯誤"><a class="markdownIt-Anchor" href="#npm-error418-茶壺錯誤"></a> <strong>npm error418 茶壺錯誤</strong></h2>
+<ol>
+<li>npm config list -l 檢查npm設置</li>
+<li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理設置</li>
+<li>npm 恢復正常</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">經驗</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/15/chrome-extension-and-npm-error.html">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-install-old-plugin-into-new-ps" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -426,11 +536,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">域名</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">經驗</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">經驗</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">域名</a>
         		</li>
       		
 		</ul>
@@ -773,6 +883,14 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">新聞</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
@@ -785,23 +903,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">免費</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">域名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">項目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -809,15 +911,23 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">雲共享</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">項目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">域名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">數獨</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -829,11 +939,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">新聞</a>
+                <a href="javascript:void(0)" class="js-tag color4">雲共享</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
             
             <div class="clearfix"></div>

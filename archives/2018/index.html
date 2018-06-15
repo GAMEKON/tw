@@ -218,6 +218,116 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-chrome-extension-and-npm-error" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+
+    <h1 itemprop="name">
+      
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        <img src="/2018/06/15/chrome-extension-and-npm-error/featured.png">
+      </a>
+      
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        chrome非官方插件安裝與npm茶壺報錯處理
+      </a>
+    </h1>
+ 
+
+
+        
+        <a href="/2018/06/15/chrome-extension-and-npm-error.html" class="archive-article-date">
+  	<time datetime="2018-06-15T02:34:55.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-15</time>
+</a>
+        
+          <link rel="canonical" href="https://tw.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html">
+          <meta name="robots" content="all">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近工作中遇到兩個小問題，壹是最新版chrome安裝非官方擴展程序後，會不斷出現要求關閉該擴展程序的提示；二是npm安裝程序突然提示“error418 I’m a teapot”錯誤。我經過壹番實踐，解決了這兩個問題，順便在此記錄壹下解決過程。</p>
+</blockquote>
+<h2 id="chrome安裝非官方擴展程序"><a class="markdownIt-Anchor" href="#chrome安裝非官方擴展程序"></a> <strong>chrome安裝非官方擴展程序</strong></h2>
+<ol>
+<li>chrome://extensions/ 打開擴展程序列表，通過拖拽crx文件的方式安裝擴展程序並記錄程序id，chrome會提示不可開啟，不用管它。</li>
+<li>通過 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下載策略文件包。</li>
+<li>復制壓縮包裏的windows\admx\chrome.admx 到 c:\windows\policydefinitions；復制壓縮包裏的windows\admx[妳的語言]\chrome.adml 到 c:\windows\policydefinitions[妳的語言]\chrome.adml。</li>
+<li>打開gpedit.msc本地組策略編輯器，展開 用戶配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 擴展程序，雙擊打開“配置擴展程序安裝白名單”，選中“已啟用”，點擊“顯示…”，在列表中輸入剛才記下的擴展程序id值，點擊確定。</li>
+<li>重啟Chrome，可以看到被禁用的擴展現在已經可以啟用了。</li>
+</ol>
+<h2 id="npm-error418-茶壺錯誤"><a class="markdownIt-Anchor" href="#npm-error418-茶壺錯誤"></a> <strong>npm error418 茶壺錯誤</strong></h2>
+<ol>
+<li>npm config list -l 檢查npm設置</li>
+<li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理設置</li>
+<li>npm 恢復正常</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">經驗</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/15/chrome-extension-and-npm-error.html">展開全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Cocos-Creator-v2-Preview" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -252,65 +362,9 @@
 <p>為了信守承諾，我們終於在五月的最後兩個小時準備好了 Cocos Creator v2.0 版本！好開心！好激動！</p>
 <p>至於更新了哪些東西。。。我只能說，由於改動過大，不知從何說起。壹句話概括的話，就是在保障組件層 API 不變的情況下，我們把底層徹底重寫了，從 Cocos Creator v2.0 開始，將徹底從 Cocos2d-x 的框架脫胎重生，將不再能看到舊 Cocos 的影子，比如 1.x 時代的 sgNode 已經徹底見不到了。目前大家直接使用 v2.0 會遇到不少的警告和報錯，壹般都是由於使用了舊的 API，我們也為這些 API 都提供了詳細的報錯，包含如何升級和替換使用方式，請壹定留意所有的報錯信息。在升級完成之後，大家第壹印象能感受到的應該是 v2.0 帶來的性能提升，但是其實 v2.0 中我們還準備了很多驚喜給大家。在這裏要先說壹句抱歉，由於技術預覽版的準備時間倉促，我們暫時沒有將所有的文檔準備好，這些工作會在正式版發布前全部落實，到時候大家也就能真正發揮 v2.0 的潛力。</p>
 <p>最重要的是，請大家壹定要備份好項目再嘗鮮，不要控制不住雙手。</p>
-<h2 id="版本更新"><a class="markdownIt-Anchor" href="#版本更新"></a> <strong>版本更新</strong></h2>
-<p>更新 Cocos Creator v2.0.0 Preview 4：<a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4_20180608.dmg" rel="external nofollow noopener noreferrer" target="_blank">下載 Mac 版本</a> | <a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4.7z" rel="external nofollow noopener noreferrer" target="_blank">下載 Windows 版本</a> (2018/6/8)</p>
-<ul>
-<li>[FEATURE] 新增節點 Alpha 級聯</li>
-<li>[MODIF] 僅在需要時監聽小遊戲重力感應事件</li>
-<li>[MODIF] 將 Editbox 中平臺相關代碼移動到平臺相關 builtin 模塊中</li>
-<li>[FIX] 修復 Prefab 關閉時，恢復場景導致的報錯</li>
-<li>[FIX] 修復編輯 Prefab 內部動畫時，雙擊打開其他 Prefab 會卡死的問題</li>
-<li>[FIX] 修復 Sprite FillType 為 RADIAL 時不能編輯 FillCenter 的問題</li>
-<li>[FIX] 修復修改節點 Anchor 後，undo 撤銷修改導致的顯示錯誤</li>
-<li>[FIX] 修復 tilemap 如果包含空 layer 會報錯的問題</li>
-<li>[FIX] 修復 DOM 相關組件事件監聽器引起的內存泄漏問題</li>
-<li>[FIX] 修復 Mask 組件切換模式以及重新啟用時導致的持續報錯</li>
-<li>[FIX] 修復相鄰 Mask 被錯誤批處理的問題</li>
-<li>[FIX] 修復 Active 狀態更新後的 world transform 錯誤</li>
-<li>[FIX] 修復 Auto remove on finish 導致粒子節點在編輯器中消失的問題</li>
-<li>[FIX] 修復 Example 工程主界面測試按鈕的顯示抖動</li>
-<li>[FIX] 修復 Editbox 的顯示殘留問題</li>
-<li>[FIX] 修復節點下添加多個渲染組件的報錯問題</li>
-<li>[FIX] 修復 BMFont Label 顏色無法設置問題</li>
-<li>[FIX] 修復 LabelOutline 透明度不受節點透明度影響問題</li>
-<li>[FIX] 修復安卓小遊戲平臺重力感應事件</li>
-<li>[FIX] 修復 Sprite 組件 Sliced 模式的渲染問題</li>
-<li>[FIX] 修復 Sprite 組件 Gray State 導致 gl warning 的問題</li>
-<li>[FIX] 修復編輯 Prefab 之後返回場景導致場景失效的問題</li>
-<li>[FIX] 修復 Accelerometer 事件在屏幕朝向不等同於設備朝向時的坐標軸錯誤</li>
-<li>[FIX] 修復節點事件的 target 和 currentTarget 問題</li>
-</ul>
-<h2 id="相關資源"><a class="markdownIt-Anchor" href="#相關資源"></a> <strong>相關資源</strong></h2>
-<p><a href="https://github.com/pandamicro/heartfelt" rel="external nofollow noopener noreferrer" target="_blank">Material 使用案例</a></p>
-<h2 id="release-notes"><a class="markdownIt-Anchor" href="#release-notes"></a> <strong>RELEASE NOTES</strong></h2>
-<p><strong>平臺支持</strong><br>
-Cocos Creator v2.0.0 Preview 是壹個技術預覽版，目前尚不支持所有平臺，以下是我們支持的平臺</p>
-<p>Web（WebGL 渲染）<br>
-微信小遊戲平臺</p>
-<p><strong>資源升級</strong><br>
-v2.0 合並了 v1.10 的所有修改，v1.10 對底層資源類型進行了重構，大多數項目不受影響，但有些項目可能會收到壹些警告，詳情請查閱 <a href="http://docs.cocos.com/creator/manual/zh/release-notes/raw-asset-migration.html" rel="external nofollow noopener noreferrer" target="_blank">v1.10 資源升級指南</a>。</p>
-<p><strong>編輯器</strong><br>
-實現了 Texture 的 premultiply alpha，filter mode，wrap mode 配置<br>
-集成 Quick Compile，自定義引擎只需要使用菜單的 “開發者選項” -&gt; “編譯引擎” 可在幾秒內快速編譯完成</p>
-<p><strong>引擎</strong><br>
-徹底移除渲染樹<br>
-添加基於 3D Renderer 的新渲染器<br>
-渲染組件實現全面升級<br>
-Camera 組件升級<br>
-添加自定義渲染組件能力（尚未公開文檔，正式版之前會開放）<br>
-正式增加了 RenderTexture 資源類型，可以參考 example cases 中的 “render_to_canvas” 和 “render_to_sprite” 測試用例學習如何使用 RenderTexture 完成截屏</p>
-<p><strong>REMOVED &amp; DEPRECATION</strong><br>
-v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以參考 <a href="https://github.com/cocos-creator/engine/blob/next/cocos2d/deprecated.js" rel="external nofollow noopener noreferrer" target="_blank">deprecated.js</a></p>
-<h2 id="性能和框架"><a class="markdownIt-Anchor" href="#性能和框架"></a> <strong>性能和框架</strong></h2>
-<p><strong>性能進化</strong><br>
-從 v2.0 開始，我們建立了性能基線跟蹤測試，下面是 v1.8.2（v1.x 後續版本沒有性能優化）和 v2.0 的性能對比<br>
-<img src="/2018/06/10/Cocos-Creator-v2-Preview/1.jpg" alt="性能對比"></p>
-<p><strong>框架進化</strong><br>
-這裏放出兩張簡單的 v2.0 架構圖以及和 v1.x 的對比，未來會有更詳細的文檔獻給大家<br>
-<img src="/2018/06/10/Cocos-Creator-v2-Preview/2.jpg" alt="1.x節點樹"><br>
-<img src="/2018/06/10/Cocos-Creator-v2-Preview/3.jpg" alt="2.0節點樹"><br>
-<img src="/2018/06/10/Cocos-Creator-v2-Preview/4.jpg" alt="2.0渲染框架"></p>
-
+        
+          <a class="article-more-a" href="/2018/06/10/Cocos-Creator-v2-Preview.html#more">更多內容 >></a>
+        
       
 
       
@@ -1012,108 +1066,6 @@ v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以�
 
 
   
-    <article id="post-happy-magic-01" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-
-    <h1 itemprop="name">
-      
-      <a class="article-title" href="/2018/04/15/happy-magic-01.html">
-        <img src="/2018/04/15/happy-magic-01/featured.jpg">
-      </a>
-      
-      <a class="article-title" href="/2018/04/15/happy-magic-01.html">
-        新遊戲項目 Happy Magic
-      </a>
-    </h1>
- 
-
-
-        
-        <a href="/2018/04/15/happy-magic-01.html" class="archive-article-date">
-  	<time datetime="2018-04-15T08:34:09.263Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
-</a>
-        
-          <link rel="canonical" href="https://tw.gamekon.com/2018/04/15/happy-magic-01.html">
-          <meta name="robots" content="all">
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/2018/04/15/happy-magic-01/HappyMagicModel.png" alt="model"></p>
-<blockquote>
-<p>Happy Magic, Happy Day!</p>
-</blockquote>
-<p>從今天開始遊戲項目<code>HappyMagic</code>正式立項！🎉<br>
-以上是遊戲服務模型圖，敬請期待。<br>
-遊戲贊助可以點擊這裏：<br>
-<a href="https://www.paypal.me/gamekon/" rel="external nofollow noopener noreferrer" target="_blank">https://www.paypal.me/gamekon/</a><br>
-謝謝！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">項目</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/15/happy-magic-01.html">展開全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
@@ -1203,6 +1155,14 @@ v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以�
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">新聞</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
@@ -1215,23 +1175,7 @@ v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以�
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">免費</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">域名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">項目</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1239,15 +1183,23 @@ v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以�
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">雲共享</a>
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">項目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">域名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">數獨</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1259,11 +1211,11 @@ v1.x 的大量私有以及非核心 API 被移除或廢棄，詳細內容可以�
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">新聞</a>
+                <a href="javascript:void(0)" class="js-tag color4">雲共享</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+                <a href="javascript:void(0)" class="js-tag color1">Unity</a>
               </li>
             
             <div class="clearfix"></div>
