@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tw.gamekon.com/"/>
-  <updated>2018-06-15T02:35:32.045Z</updated>
+  <updated>2018-06-15T02:44:58.219Z</updated>
   <id>https://tw.gamekon.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://tw.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html"/>
     <id>https://tw.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html</id>
     <published>2018-06-15T02:34:55.690Z</published>
-    <updated>2018-06-15T02:35:32.045Z</updated>
+    <updated>2018-06-15T02:44:58.219Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>最近工作中遇到兩個小問題，壹是最新版chrome安裝非官方擴展程序後，會不斷出現要求關閉該擴展程序的提示；二是npm安裝程序突然提示“error418 I’m a teapot”錯誤。我經過壹番實踐，解決了這兩個問題，順便在此記錄壹下解決過程。</p></blockquote><h2 id="chrome安裝非官方擴展程序"><a class="markdownIt-Anchor" href="#chrome安裝非官方擴展程序"></a> <strong>chrome安裝非官方擴展程序</strong></h2><ol><li>chrome://extensions/ 打開擴展程序列表，通過拖拽crx文件的方式安裝擴展程序並記錄程序id，chrome會提示不可開啟，不用管它。</li><li>通過 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下載策略文件包。</li><li>復制壓縮包裏的windows\admx\chrome.admx 到 c:\windows\policydefinitions；復制壓縮包裏的windows\admx[妳的語言]\chrome.adml 到 c:\windows\policydefinitions[妳的語言]\chrome.adml。</li><li>打開gpedit.msc本地組策略編輯器，展開 用戶配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 擴展程序，雙擊打開“配置擴展程序安裝白名單”，選中“已啟用”，點擊“顯示…”，在列表中輸入剛才記下的擴展程序id值，點擊確定。</li><li>重啟Chrome，可以看到被禁用的擴展現在已經可以啟用了。</li></ol><h2 id="npm-error418-茶壺錯誤"><a class="markdownIt-Anchor" href="#npm-error418-茶壺錯誤"></a> <strong>npm error418 茶壺錯誤</strong></h2><ol><li>npm config list -l 檢查npm設置</li><li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理設置</li><li>npm 恢復正常</li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>最近工作中遇到兩個小問題，壹是最新版chrome安裝非官方擴展程序後，會不斷出現要求關閉該擴展程序的提示；二是npm安裝程序突然提示“error418 I’m a teapot”錯誤。我經過壹番實踐，解決了這兩個問題，順便在此記錄壹下解決過程。</p></blockquote><h2 id="chrome安裝非官方擴展程序"><a class="markdownIt-Anchor" href="#chrome安裝非官方擴展程序"></a> <strong>chrome安裝非官方擴展程序</strong></h2><ol><li>chrome://extensions/ 打開擴展程序列表，選中上面的“開發者模式”選框，通過拖拽crx文件的方式安裝擴展程序並記錄程序id，chrome會提示不可開啟，不用管它。</li><li>通過 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下載策略文件包。</li><li>復制壓縮包裏的windows\admx\chrome.admx 到 c:\windows\policydefinitions；復制壓縮包裏的windows\admx[妳的語言]\chrome.adml 到 c:\windows\policydefinitions[妳的語言]\chrome.adml。</li><li>打開gpedit.msc本地組策略編輯器，展開 用戶配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 擴展程序，雙擊打開“配置擴展程序安裝白名單”，選中“已啟用”，點擊“顯示…”，在列表中輸入剛才記下的擴展程序id值，點擊確定。</li><li>重啟Chrome，可以看到被禁用的擴展現在已經可以啟用了。</li></ol><h2 id="npm-error418-茶壺錯誤"><a class="markdownIt-Anchor" href="#npm-error418-茶壺錯誤"></a> <strong>npm error418 茶壺錯誤</strong></h2><ol><li>npm config list -l 檢查npm設置</li><li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理設置</li><li>npm 恢復正常</li></ol>]]></content>
     
     <summary type="html">
     
